@@ -1,7 +1,7 @@
 name: github expression that runs on issues
-on: push
-#  issues:
-#    types: [opened, edited, milestoned]
+on: 
+  issues:
+    types: [opened, edited, milestoned]
 jobs:
   firstjob:
     runs-on: ubuntu-latest
@@ -9,7 +9,7 @@ jobs:
       - name: Get code
         uses: actions/checkout@v3
       - name: printing github expressions
-        run: echo "${{ toJSON(github.actor) }}"
+        run: echo "${{ toJSON(github.event) }}"
       
 
 
