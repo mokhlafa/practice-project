@@ -9,7 +9,7 @@ jobs:
       - name: Get code
         uses: actions/checkout@v3
       - name: printing github expressions
-        run: echo "${{ toJSON(github) }}"
+        run: echo "${{ toJSON(github.actor) }}"
       
 
 
